@@ -13,6 +13,9 @@ class PolishExpression
                 $res = $this->a * $this->b;
                 break;
             case '/':
+		if($this->b == 0){
+			die('Деление на ноль');
+		}
                 $res = $this->a / $this->b;
                 break;
             case '+':
